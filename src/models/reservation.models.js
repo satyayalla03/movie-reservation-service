@@ -5,12 +5,12 @@ const reservationSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    userId: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true
     },
-    showtimeId: {
+    showtime: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Showtime",
         required: true

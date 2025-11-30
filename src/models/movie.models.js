@@ -29,6 +29,10 @@ movieSchema.virtual("showtimes", {
     foreignField: "movieId"    // showtime.movieId
 });
 
+// Ensure virtuals appear when converting to JSON or Object
+movieSchema.set("toObject", { virtuals: true });
+movieSchema.set("toJSON", { virtuals: true });
+
 // if a movie is deleted, deletes its showtimes too
 // we use middleware
 
